@@ -11,26 +11,28 @@ class Homework {
     lateinit var expenses: String
 
 //    Количество участников
-    var count: Int = 0
+    var members: Int = 0
     get() = field
-    set(value) {
-        if (value > 0) field += value
-    }
+    private set(value) {field=value}
 //    Длительность хакатона
-    const val DURATION: Double = 4.5
+    const val DURATION: Long = 4*60*60
 //    Контактная информация и условия соглашений с поставщиками пищи, оборудования и других услуг.
-    lateinit var contactsAndAgreements: String
+    private lateinit var contactsAndAgreements: String
 //    Текущее состояние хакатона (статус)
     var status: String = "Start"
 //    Список спонсоров
     val sponsors: String = " спонсор 1, спонсор 2, спонсор 3"
 //    Бюджет мероприятия
 //    Текущий уровень доступа к интернету
+    var internetAccessLevel: Int = 0
+// Настроение определяется по результатам опроса
+    val mood: String by lazy { "" }
 //    Информация о транспортировке оборудования, распределении ресурсов и координации между различными командами поддержки.
 //    Количество команд
-    var numberOfTeams: Int = 20
+    var numberOfTeams: Int = 0
 //    Перечень задач
 //    План эвакуации
+    lateinit var plan: String
 //    Список доступного оборудования
 //    Список свободного оборудования
 

@@ -55,7 +55,7 @@ fun main () {
     Если коэффициент затухания неизвестен, использовать стандартное значение 0.5.
     */
 
-    fun task1(coefficient: Double?, intensity: Double): Double {
+    fun soundIntensity (coefficient: Double?, intensity: Double): Double {
         return intensity * (coefficient ?: 0.5)
     }
 
@@ -65,7 +65,7 @@ fun main () {
     Задача: Рассчитать полную стоимость доставки.
      */
 
-    fun task2(delivery: Double, itemPrice: Double?): Double {
+    fun shippingCost (delivery: Double, itemPrice: Double?): Double {
         val insurance: Double = (itemPrice ?: 50) as Double / 200
         return delivery + insurance
     }
@@ -77,7 +77,7 @@ fun main () {
     Задача - сообщить об ошибке в случае отсутствия показаний атмосферного давления.
      */
 
-    fun task3(atmPressure: Double?, indikator1: Double, indikator2: Double): Double {
+    fun measurements (atmPressure: Double?, indikator1: Double, indikator2: Double): Double {
         return atmPressure ?: throw IllegalArgumentException("Нет значения атмосферного давления")
     }
 }

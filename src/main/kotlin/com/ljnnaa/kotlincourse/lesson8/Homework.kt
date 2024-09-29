@@ -20,7 +20,7 @@ package com.ljnnaa.kotlincourse.lesson8
             text.startsWith("Я не уверен", true) -> "$text, но моя интуиция говорит об обратном"
             text.contains("катастрофа", true) -> text.replace("катастрофа", "интересное событие")
             text.endsWith("без проблем") -> text.replace("без проблем", "с парой интересных вызовов на пути")
-            !text.contains(" ") -> "Иногда, ${text.lowercase()}, но не всегда"
+            text.split(" ").size == 1 -> "Иногда $text, но не всегда."
             else -> ""
         }
     }
